@@ -1,4 +1,4 @@
-function User(){
+function User({...randomUser}){
     return(
         <div>
             user

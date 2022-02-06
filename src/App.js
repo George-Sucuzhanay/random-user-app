@@ -10,8 +10,7 @@ function App() {
 
   const newUser = async() => {
     const randoUserInfo = await fetchUser();
-    setCurrentUser(randoUserInfo.results);
-
+    setCurrentUser(randoUserInfo);
   }
   useEffect(() => {
     newUser()
@@ -21,15 +20,13 @@ function App() {
     <div className="App">
       <Header/>
       <br></br>
-      <button onClick={newUser}>⟳</button>
-      {console.log(currentUser)}
-      <div>{JSON.stringify(currentUser)}</div> 
-      {newUser?.map((randomUser, index) => {
-        return <UserSummary userData={currentUser}{...randomUser}index={index}
-              />
-      })}
-      <User/>
-      <UserSummary/>
+      <button onClick={newUser}>Click me for new User!</button>
+      {/* {currentUser?.map((randomUser, index) => {
+        return <User {...randomUser} index={index}/>
+      })} */}
+
+      <UserSummary userData={currentUser} />
+
     </div>
   );
 }

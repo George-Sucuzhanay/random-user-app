@@ -1,13 +1,8 @@
-function UserSummary({name, email}){
-    if (userData == null){
-        console.log("there is no user data")
-    }
-    else{
-        
-    }
+function UserSummary({userData}){
+    
     return(
         <div>
-            User sum
+            
         </div>
     )
 }
